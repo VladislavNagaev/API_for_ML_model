@@ -1,0 +1,15 @@
+numpy==1.22.3
+pandas==1.2.4
+scikit-learn==0.24.2
+tensorflow-gpu==2.8.0
+pydantic==1.9.0
+uvicorn==0.17.6
+fastapi==0.75.2
+# PyYAML==6.0
+SQLAlchemy==1.4.36
+psycopg2==2.9.3
+mlflow==1.25.1
+mlflow[extras]
+loguru==0.6.0
+pytest==7.1.2
+boto3==1.22.8

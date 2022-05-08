@@ -1,0 +1,7 @@
+psycopg2==2.9.3
+mlflow==1.25.1
+mlflow-skinny==1.25.1
+SQLAlchemy==1.4.36
+alembic==1.7.7
+sqlparse==0.4.2
+mlflow[extras]

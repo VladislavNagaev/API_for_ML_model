@@ -1,0 +1,13 @@
+POSTGRES_USER=mladmin
+POSTGRES_PASSWORD=mladmin
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=mldata
+MLFLOW_S3_ENDPOINT_URL=https://storage.yandexcloud.net/
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+BUCKET=mlflow-artifact
+ARTIFACT_STORE=mlruns
+MLFLOW_URI=http://mlflow:5000
+MODEL_NAME=tf-Sequential
+TOKEN=9zM3MTx1nWfQfazsDTqsWd2VYXrhEV

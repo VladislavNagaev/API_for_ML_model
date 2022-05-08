@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+
+  mlflow:
+    build:
+      context: .
+      args:
+        POSTGRES_USER: ${POSTGRES_USER}
+        POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+        POSTGRES_HOST: ${POSTGRES_HOST}
+        POSTGRES_PORT: ${POSTGRES_PORT}
+        POSTGRES_DB: ${POSTGRES_DB}
+    networks: 
+      - main-network
+    container_name: mlflow
+    ports:
+      - 5000:5000
+    volumes:
+      - type: bind
+        source: /opt/mlflow/mlruns
+        target: /opt/mlflow/mlruns
+    env_file:
+      - ./.env
+    healthcheck:
+      test: ["CMD", "curl", "-sS", "mlflow:5000/health"]
+      interval: 5s
+      timeout: 30s
+      retries: 50
+    restart: always
+
+
+networks:
+  main-network:
+    external: true
